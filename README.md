@@ -58,9 +58,7 @@ Cсылка на smoke тест-кейсы: https://app.qase.io/project/JC?suite
 
 Что нужно было сделать:
 
-Этап 1. Написание скриптов для тестирования функциональности сервиса 
-
-Ссылка на проект: 
+Написание скриптов для тестирования функциональности сервиса 
 
 Postman: https://lunar-resonance-398283.postman.co/workspace/Team-Workspace~0729f3cc-73b9-4ea9-8da7-cd6220096f4f/collection/27209347-69b66a08-343e-49dc-9942-71780b5fde6d?action=share&creator=27209347
 
@@ -69,6 +67,12 @@ Postman: https://lunar-resonance-398283.postman.co/workspace/Team-Workspace~0729
 Команда для запуска нагрузочного теста:   .\jmeter -n -t Homework_7.jmx -l logfile.log -e -o web -Jvu=10 -Jloop=4 -Jramp-up=5
 
 Примечание: Данный jmx файл содержится в директории bin
+
+**Проект 4: Написание SQL-запросов**
+
+Что нужно было сделать:
+
+Создание SQL-запросов по определенным условиям, основываясь на предоставленных данных.
 
 
 ## Контакты
