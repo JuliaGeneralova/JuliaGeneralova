@@ -1,0 +1,538 @@
+{
+	"info": {
+		"_postman_id": "69b66a08-343e-49dc-9942-71780b5fde6d",
+		"name": "Курсовая API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27209347",
+		"_collection_link": "https://lunar-resonance-398283.postman.co/workspace/Team-Workspace~0729f3cc-73b9-4ea9-8da7-cd6220096f4f/collection/27209347-69b66a08-343e-49dc-9942-71780b5fde6d?action=share&creator=27209347&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "+Получение расписание",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"2023-05-21T00:00:00+03:00\",\r\n    \"till\": \"2023-06-21T21:00:00+03:00\",\r\n    \"onlyTypes\": [\r\n        \"slot\",\r\n        \"event\"\r\n    ],\r\n    \"statuses\": [\r\n        \"without_status\"\r\n    ],\r\n    \"token\": \"{{TOKEN}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{URL}}/{{VER}}/{{TAB}}/events",
+					"protocol": "https",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{VER}}",
+						"{{TAB}}",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "+Создание личного события",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startAt\": \"2023-06-03T03:00:00+03:00\",\r\n    \"endAt\": \"2023-07-03T03:30:00+03:00\",\r\n    \"title\": \"Новое ЛС Генералова\",\r\n    \"description\":\"Привет\",\r\n    \"color\": \"#FAC643\",\r\n    \"backgroundColor\": \"#F0F7C7\",\r\n\r\n    \"token\": \"{{TOKEN}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{URL}}/{{VER}}/{{TAB}}/createPersonal",
+					"protocol": "https",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{VER}}",
+						"{{TAB}}",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "+Создание события с валидными значениями в будущем",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startAt\": \"2023-07-03T03:00:00+03:00\",\r\n    \"endAt\": \"2023-07-04T03:30:00+03:00\",\r\n    \"title\": \"Новое ЛС Генералова\",\r\n    \"description\":\"Привет\",\r\n    \"color\": \"#FFC641\",\r\n    \"backgroundColor\": \"#FFF7C7\",\r\n\r\n    \"token\": \"{{TOKEN}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{URL}}/{{VER}}/{{TAB}}/createPersonal",
+					"protocol": "https",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{VER}}",
+						"{{TAB}}",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "+Изменение ЛС на дату в прошлом",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startAt\": \"2022-03-01T02:00:00+03:00\",\r\n    \"endAt\": \"2023-07-03T03:30:00+03:00\",\r\n    \"title\": \"Новое ЛС Генералова\",\r\n    \"description\":\"Привет\",\r\n    \"color\": \"#FAC641\",\r\n    \"backgroundColor\": \"#FFF7C7\",\r\n    \"id\": {{id}},\r\n    \"oldStartAt\":\"2023-07-03T03:00:00+03:00\",\r\n\r\n    \"token\": \"{{TOKEN}}\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{URL}}/{{VER}}/{{TAB}}/updatePersonal",
+					"protocol": "https",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{VER}}",
+						"{{TAB}}",
+						"updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "+Изменение ЛС добавление комментария и изменение цвета",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startAt\": \"2023-07-03T03:00:00+03:00\",\r\n    \"endAt\": \"2023-07-04T03:30:00+03:00\",\r\n    \"title\": \"Новое ЛС Генералова\",\r\n    \"description\":\"Привет-!\",\r\n    \"color\": \"#FAC641\",\r\n    \"backgroundColor\": \"#FFF7C7\",\r\n    \"id\": {{id}},\r\n    \"oldStartAt\":\"2023-07-03T03:00:00+03:00\",\r\n\r\n    \"token\": \"{{TOKEN}}\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{URL}}/{{VER}}/{{TAB}}/updatePersonal",
+					"protocol": "https",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{VER}}",
+						"{{TAB}}",
+						"updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "+Создание события с валидными значениями в прошлом",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startAt\": \"2022-07-03T03:00:00+03:00\",\r\n    \"endAt\": \"2022-07-03T03:30:00+03:00\",\r\n    \"title\": \"Новое ЛС Генералова (в прошлом)\",\r\n    \"description\":\"Привет из будущего\",\r\n    \"color\": \"#FAC641\",\r\n    \"backgroundColor\": \"#FFF7C7\",\r\n\r\n    \"token\": \"{{TOKEN}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{URL}}/{{VER}}/{{TAB}}/createPersonal",
+					"protocol": "https",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{VER}}",
+						"{{TAB}}",
+						"createPersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "+Изменение ЛС на дату в будущем",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startAt\": \"2023-07-03T03:00:00+07:00\",\r\n    \"endAt\": \"2023-07-04T03:30:00+03:00\",\r\n    \"title\": \"Новое ЛС Генералова\",\r\n    \"description\":\"Привет-!\",\r\n    \"color\": \"#FAC641\",\r\n    \"backgroundColor\": \"#FFF7C7\",\r\n    \"id\": {{id}},\r\n    \"oldStartAt\":\"2023-07-03T03:00:00+03:00\",\r\n\r\n    \"token\": \"{{TOKEN}}\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{URL}}/{{VER}}/{{TAB}}/updatePersonal",
+					"protocol": "https",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{VER}}",
+						"{{TAB}}",
+						"updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "+Невалидное изменение цвета в ЛС",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startAt\": \"2022-03-02T03:00:00+03:00\",\r\n    \"endAt\": \"2022-03-02T03:15:00+03:00\",\r\n    \"title\": \"Генералова change!\",\r\n    \"description\":\"description 1 изменено!\",\r\n    \"color\": \"\",\r\n    \"backgroundColor\": \"\",\r\n    \"id\": {{id}},\r\n    \"oldStartAt\":\"2022-03-02T03:00:00+03:00\",\r\n\r\n    \"token\": \"{{TOKEN}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{URL}}/{{VER}}/{{TAB}}/updatePersonal",
+					"protocol": "https",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{VER}}",
+						"{{TAB}}",
+						"updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "+Невалидная ЛС без названия",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startAt\": \"2023-07-03T03:00:00+03:00\",\r\n    \"endAt\": \"2023-07-04T03:30:00+03:00\",\r\n    \"title\": \"\",\r\n    \"description\":\"Привет-!\",\r\n    \"color\": \"#FAC641\",\r\n    \"backgroundColor\": \"#FFF7C7\",\r\n    \"id\": {{id}},\r\n    \"oldStartAt\":\"2023-07-03T03:00:00+03:00\",\r\n\r\n    \"token\": \"{{TOKEN}}\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{URL}}/{{VER}}/{{TAB}}/updatePersonal",
+					"protocol": "https",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{VER}}",
+						"{{TAB}}",
+						"updatePersonal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "+Удаление ЛС",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token_global={{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startAt\": \"2023-06-28T09:30:00+03:00\",\r\n    \"id\": 82876139,\r\n \r\n    \"token\": \"{{TOKEN}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{URL}}/{{VER}}/{{TAB}}/removePersonal",
+					"protocol": "https",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{VER}}",
+						"{{TAB}}",
+						"removePersonal"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "api-teachers.skyeng.ru",
+			"type": "string"
+		},
+		{
+			"key": "VER",
+			"value": "v2",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NzIwMDY5LCJpZGVudGl0eSI6InRlc3QudHN0MzIwQHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMyMEBza3llbmcucnUiLCJpZGVudGl0eVBob25lIjoiKzc5ODU0NTg2NTY4IiwibmFtZSI6InRlc3QiLCJzdXJuYW1lIjpudWxsLCJlbWFpbCI6InRlc3QudHN0MzIwQHNreWVuZy5ydSIsInVpTGFuZ3VhZ2UiOiJydSIsImxvY2FsZSI6InJ1Iiwic2VydmljZUxvY2FsZSI6bnVsbCwidWFzIjozMCwiand0VHlwZSI6MSwianRpIjoiMlp0MnJJbTNuQTNPZEJucUJjUXd2OUR2SVd4SEdveGoiLCJicmFuZCI6bnVsbCwiZXhwIjoxNjg3OTc2NjU0LCJhSXNTdHJvbmciOnRydWUsImFUeXBlIjoiVVNFUk5BTUVfUEFTU1dPUkQiLCJhVGltZSI6MTY4Nzg5MDI0Niwicm9sZXMiOlsiUk9MRV9URUFDSEVSX0NBTkRJREFURSIsIlJPTEVfVEVBQ0hFUl9DQU5ESURBVEVfQkFTRV9BQ0NFU1MiLCJST0xFX1RUQ19VU0FHRSIsIlJPTEVfVklNQk9YX1RFQUNIRVJfVVNBR0UiLCJST0xFX1RFQUNIRVIiLCJST0xFX0NSTTJfVEVBQ0hFUl9BQ0NFU1MiLCJST0xFX01BVEhfVEVBQ0hFUiIsIlJPTEVfTUFUSF9DT05URU5UX1RIRU1FX1ZJRVciXX0.ZyqmH9PPI54IpnsVJncPIixxsOQACtQAv9qBe0gUyI1RLY_h5idS3jlpoJBlpQh4KmkTeW5zDlqVQ7xBVNxldE8h6cfiwpamO_RyXCUMz4LiFhUqPRQbxmNRZ_yviY4k8gdyIYre8Exedxkw3TGZC4uuu2-8xvmBPcsYEu4hzsyaYto-a8Qsf0H-9xFL5-sDDo8QdzdyhDqLTmHZIxHXzhEIA_SzAoGrYSWom19Jf8GvoJqQkiWuUOPPqQussus6i3m3O6Hbuwkflr_8TsKmoTU9lDGTSz35UNLafr584vAAX1fbtbW7YEwDgXY7wau6GFqAdgbUfMK5nJISNcw2r5BVHvvWo_E49Dcq1_PDGDk-JeZO2iAC8zOqBPnZR0Wq9KQh9VqzoDtKSKPohw-VZzlIZoaULxV5gfnAljrSYsSlrypv3qlFTM_C1OQbzVU6QqaOpiTaw-vBwceufMmSvOWH1775HstJeLJCaSgZCYZZG5pXnR7MYBHvLHC4mAy-ZnrwKR3eTFftJvYxal8o_fqVjzCckNBnRhKe9l4xZc_eMukO9Q1O9VeEwB9IStg6sH7FuVex3iXkaGuX_WHwb_H8bKcd9c9PtAu9z1VKiWIHL86Phqik6qAtstJUMuDR_UeLAc3yUgdU9RtPqpCioMBr883oxrKzJEwL5WhviEc",
+			"type": "string"
+		},
+		{
+			"key": "TAB",
+			"value": "schedule",
+			"type": "string"
+		},
+		{
+			"key": "id",
+			"value": "82949379",
+			"type": "string"
+		}
+	]
+}
