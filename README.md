@@ -54,19 +54,18 @@ Cсылка на smoke тест-кейсы: https://app.qase.io/project/JC?suite
 
 Ссылка на отчет по тестированию: https://qa-bug-report40.atlassian.net/wiki/spaces/JC/overview
 
-**Проект 2: Тестирование API c помощью Postman**
+**Проект 2: Тестирование API c помощью инструмента Postman**
 
 Что нужно было сделать:
 
 Этап 1. Написание скриптов для тестирования функциональности сервиса 
 
-Как решала(-а): краткое описание решения (автореферат)
+Ссылка на проект: 
 
-Выводы (итоги):
+Postman: https://lunar-resonance-398283.postman.co/workspace/Team-Workspace~0729f3cc-73b9-4ea9-8da7-cd6220096f4f/collection/27209347-69b66a08-343e-49dc-9942-71780b5fde6d?action=share&creator=27209347
 
-Итог №1
 
-Итог №2
+
 ## Контакты
 - Email: ygeneralova1999@gmail.ru
 
