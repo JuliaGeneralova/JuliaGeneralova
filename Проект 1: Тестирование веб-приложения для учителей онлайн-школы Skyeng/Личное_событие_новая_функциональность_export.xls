@@ -1,0 +1,294 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta name="author" content="dev.sitechco.ru" />
+    </head>
+<table  border="1">
+    <tr>
+        <td colspan="4">Название (Аббр.): "Личное событие" (новая функциональность) (Lich)</td>
+    </tr>
+    <tr>
+        <td colspan="4">Описание: </td>
+    </tr>
+            <tr>
+        <td colspan="4">Статус: Не согласован </td>
+    </tr>
+            <tr>
+        <td colspan="4" style="background-color: #ced1d1;">Название события</td>
+    </tr>
+    <tr>
+        <td colspan="4" style="background-color: #ced1d1;"></td>
+    </tr>
+    <tr>
+        <td>№</td>
+        <td>Приоритет</td>
+        <td>Проверка</td>
+                <td>Результат</td>
+                    </tr>
+        <tr>
+        <td>
+            1        </td>
+        <td>
+            Средний        </td>
+        <td>Оставить поле пустым</td>
+                <td>Событие не создается и подсвечивается красным</td>
+                    </tr>
+        <tr>
+        <td>
+            2        </td>
+        <td>
+            Средний        </td>
+        <td>Ввести от 1 до 40 символов</td>
+                <td>Событие создается</td>
+                    </tr>
+        <tr>
+        <td>
+            3        </td>
+        <td>
+            Средний        </td>
+        <td>Ввести более 40 символов</td>
+                <td>Событие не создается и подсвечивается красным</td>
+                    </tr>
+        <tr>
+        <td>
+            4        </td>
+        <td>
+            Средний        </td>
+        <td>Ввести спецсимволы</td>
+                <td>Событие создается</td>
+                    </tr>
+        <tr>
+        <td>
+            5        </td>
+        <td>
+            Средний        </td>
+        <td>Ввести кириллицу</td>
+                <td>Событие создается</td>
+                    </tr>
+        <tr>
+        <td>
+            6        </td>
+        <td>
+            Средний        </td>
+        <td>Ввести латиницу</td>
+                <td>Событие создается</td>
+                    </tr>
+        <tr>
+        <td>
+            7        </td>
+        <td>
+            Средний        </td>
+        <td>Ввести иероглифы</td>
+                <td>Событие создается</td>
+                    </tr>
+        <tr>
+        <td>
+            8        </td>
+        <td>
+            Средний        </td>
+        <td>Ввести цифры</td>
+                <td>Событие создается</td>
+                    </tr>
+            <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+                <td></td>
+                    </tr>
+            <tr>
+        <td colspan="4" style="background-color: #ced1d1;">День и время</td>
+    </tr>
+    <tr>
+        <td colspan="4" style="background-color: #ced1d1;"></td>
+    </tr>
+    <tr>
+        <td>№</td>
+        <td>Приоритет</td>
+        <td>Проверка</td>
+                <td>Результат</td>
+                    </tr>
+        <tr>
+        <td>
+            9        </td>
+        <td>
+            Средний        </td>
+        <td>Ввести день и время самостоятельно</td>
+                <td>Невозможно самостоятельно ввести дату и время</td>
+                    </tr>
+        <tr>
+        <td>
+            10        </td>
+        <td>
+            Средний        </td>
+        <td>Выбрать дату и время из прошлого</td>
+                <td>Невозможно самостоятельно ввести дату и время</td>
+                    </tr>
+        <tr>
+        <td>
+            11        </td>
+        <td>
+            Средний        </td>
+        <td>Выбрать дату и время из настоящего или будущего</td>
+                <td>Возможно выбрать дату и время из настоящего или будущего</td>
+                    </tr>
+        <tr>
+        <td>
+            12        </td>
+        <td>
+            Средний        </td>
+        <td>Не выбрать ничего</td>
+                <td>Невозможно самостоятельно ввести дату и время</td>
+                    </tr>
+            <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+                <td></td>
+                    </tr>
+            <tr>
+        <td colspan="4" style="background-color: #ced1d1;">Описание</td>
+    </tr>
+    <tr>
+        <td colspan="4" style="background-color: #ced1d1;"></td>
+    </tr>
+    <tr>
+        <td>№</td>
+        <td>Приоритет</td>
+        <td>Проверка</td>
+                <td>Результат</td>
+                    </tr>
+        <tr>
+        <td>
+            13        </td>
+        <td>
+            Средний        </td>
+        <td>Оставить поле пустым</td>
+                <td>Событие создается</td>
+                    </tr>
+        <tr>
+        <td>
+            14        </td>
+        <td>
+            Средний        </td>
+        <td>Ввести от 1 до 500 символов</td>
+                <td>Событие создается</td>
+                    </tr>
+        <tr>
+        <td>
+            15        </td>
+        <td>
+            Средний        </td>
+        <td>Ввести 501 и более символов</td>
+                <td>Событие создается</td>
+                    </tr>
+        <tr>
+        <td>
+            16        </td>
+        <td>
+            Средний        </td>
+        <td>Вставить картинку</td>
+                <td>Событие не создается</td>
+                    </tr>
+        <tr>
+        <td>
+            17        </td>
+        <td>
+            Средний        </td>
+        <td>Вставить ссылку</td>
+                <td>Событие создается</td>
+                    </tr>
+        <tr>
+        <td>
+            18        </td>
+        <td>
+            Средний        </td>
+        <td>Ввести кириллицу</td>
+                <td>Событие создается</td>
+                    </tr>
+        <tr>
+        <td>
+            19        </td>
+        <td>
+            Средний        </td>
+        <td>Ввести латиницу</td>
+                <td>Событие создается</td>
+                    </tr>
+        <tr>
+        <td>
+            20        </td>
+        <td>
+            Средний        </td>
+        <td>Ввести только спецсимволы</td>
+                <td>Событие создается</td>
+                    </tr>
+        <tr>
+        <td>
+            21        </td>
+        <td>
+            Средний        </td>
+        <td>Ввести иероглифы</td>
+                <td>Событие создается</td>
+                    </tr>
+            <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+                <td></td>
+                    </tr>
+            <tr>
+        <td colspan="4" style="background-color: #ced1d1;">Цвет события</td>
+    </tr>
+    <tr>
+        <td colspan="4" style="background-color: #ced1d1;"></td>
+    </tr>
+    <tr>
+        <td>№</td>
+        <td>Приоритет</td>
+        <td>Проверка</td>
+                <td>Результат</td>
+                    </tr>
+        <tr>
+        <td>
+            22        </td>
+        <td>
+            Средний        </td>
+        <td>Выбрать один цвет</td>
+                <td>Выбирается один цвет</td>
+                    </tr>
+        <tr>
+        <td>
+            23        </td>
+        <td>
+            Средний        </td>
+        <td>Не выбрать ничего</td>
+                <td>По умолчанию цвет серый</td>
+                    </tr>
+        <tr>
+        <td>
+            24        </td>
+        <td>
+            Средний        </td>
+        <td>Выбрать 2 и более цветов одновременно</td>
+                <td>Не выбирается 2 и более цветов</td>
+                    </tr>
+            </table>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript"> 
+(function (d, w, c) { (w[c] = w[c] || []).push(function() {
+	try { w.yaCounter43980704 = new Ya.Metrika({
+			id:43980704,
+			clickmap:true,
+			trackLinks:true,
+			accurateTrackBounce:true
+		}); }
+	catch(e) { } });
+	var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); };
+	s.type = "text/javascript"; s.async = true;
+	s.src = "https://mc.yandex.ru/metrika/watch.js";
+	if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); }
+	else { f(); } })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/43980704" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
