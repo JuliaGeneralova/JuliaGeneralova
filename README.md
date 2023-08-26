@@ -64,6 +64,11 @@ Cсылка на smoke тест-кейсы: https://app.qase.io/project/JC?suite
 
 Postman: https://lunar-resonance-398283.postman.co/workspace/Team-Workspace~0729f3cc-73b9-4ea9-8da7-cd6220096f4f/collection/27209347-69b66a08-343e-49dc-9942-71780b5fde6d?action=share&creator=27209347
 
+**Проект 3: Нагрузочное тестирование с помощью Apache Jmeter**
+
+Команда для запуска нагрузочного теста:   .\jmeter -n -t Homework_7.jmx -l logfile.log -e -o web -Jvu=10 -Jloop=4 -Jramp-up=5
+
+Примечание: Данный jmx файл содержится в директории bin
 
 
 ## Контакты
